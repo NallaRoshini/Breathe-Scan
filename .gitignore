@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+
+#ignore virtual environment
+venv/
+
+#ignore database files
+instance/*.db
+instance/*.sqlite3
+
+# ignore model weights
+Training/*.h5
+
+# ignore environment variables
+.env
+
+*.log
+*.cache
