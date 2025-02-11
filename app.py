@@ -10,7 +10,7 @@ from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
 app.secret_key = '123'  # Change this to a secure key
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", "postgresql://lungs_disease_db_user:grusBsQzlEIC0mbr2k01JrkaMNAEg3vS@dpg-culn3ol2ng1s73auc8f0-a/lungs_disease_db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
